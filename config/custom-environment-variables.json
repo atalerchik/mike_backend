@@ -1,0 +1,24 @@
+{
+  "db": {
+    "host": "DATABASE_HOST",
+    "port": "DATABASE_PORT",
+    "username": "DATABASE_USERNAME",
+    "password": "DATABASE_PASSWORD",
+    "databaseName": "DATABASE_NAME"
+  },
+  "server": {
+    "port": "SERVER_PORT"
+  },
+  "historyModule": {
+    "url": "HISTORY_MODULE_URL",
+    "historyType": "HISTORY_MODULE_TYPE",
+    "logTraceStack": "HISTORY_MODULE_TRACE"
+  },
+  "inventoryModule": {
+    "url": "INVENTORY_MODULE_URL"
+  },
+  "taskModule": {
+    "url": "TASK_MODULE_URL",
+    "getTaskEndpointPath": "TASK_MODULE_GET_TASK_ENDPOINT_PATH"
+  }
+}
