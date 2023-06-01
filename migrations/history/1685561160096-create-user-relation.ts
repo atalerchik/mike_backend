@@ -11,10 +11,12 @@ export class CreateUserRelation1685561160096 implements MigrationInterface {
           {
             name: "id",
             type: "uuid",
+            isGenerated: true,
+            generationStrategy: "uuid",
             isPrimary: true,
           },
           {
-            name: "password",
+            name: "name",
             type: "varchar",
             length: "128",
             isNullable: false,
@@ -27,7 +29,13 @@ export class CreateUserRelation1685561160096 implements MigrationInterface {
             isUnique: true,
           },
           {
-            name: "authorithation_token",
+            name: "password",
+            type: "varchar",
+            length: "128",
+            isNullable: false,
+          },
+          {
+            name: "authorization_token",
             type: "uuid",
             isNullable: true,
             isUnique: true,

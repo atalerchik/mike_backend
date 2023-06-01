@@ -27,12 +27,17 @@ export class User extends Model {
   @AllowNull(false)
   @Max(128)
   @Column(DataType.STRING)
-  password!: string;
+  name!: string;
 
   @AllowNull(false)
   @Max(328)
   @Column(DataType.STRING)
   email!: string;
+
+  @AllowNull(false)
+  @Max(128)
+  @Column(DataType.STRING)
+  password!: string;
 
   @AllowNull(true)
   @Column(DataType.UUID)
@@ -59,4 +64,3 @@ export class User extends Model {
   @Column(DataType.DATE)
   deletedAt?: Date;
 }
-
