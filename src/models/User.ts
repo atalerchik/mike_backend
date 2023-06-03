@@ -45,7 +45,7 @@ export class User extends Model {
 
   @AllowNull(true)
   @Column(DataType.UUID)
-  activationToken?: string;
+  activationToken?: string | null;
 
   @AllowNull(false)
   @Default(false)
