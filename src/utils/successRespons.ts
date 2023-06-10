@@ -15,4 +15,8 @@ export function errorResponse(req: Request, res: Response, err: unknown) {
   const status = err instanceof HttpError ? (err as HttpError).httpCode : 500;
 
   res.status(status).json({ status: "error", error: { message } });
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 855abf6 (something)

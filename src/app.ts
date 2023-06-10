@@ -1,5 +1,5 @@
 import express, { json, Application } from "express";
-import userRoutes from "./routes";
+import userRoutes from "./routes/user";
 import helmet from "helmet";
 import { errorBoundaryMiddleware } from "./middlewares/middlewares";
 import { connect } from "./libs/sequelize";
