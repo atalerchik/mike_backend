@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {
   "name": "mike-backend",
   "version": "1.0.0",
@@ -61,72 +60,3 @@
     "typescript": "^5.0.4"
   }
 }
-=======
-{
-  "name": "mike-backend",
-  "version": "1.0.0",
-  "description": "",
-  "main": "src/server.ts",
-  "scripts": {
-    "test": "mocha -r ts-node/register 'tests/**/*.ts' -w --watch-files '**/*.ts'",
-    "dev": "nodemon ./src/server.ts ",
-    "build": "tsc",
-    "typeorm": "typeorm-ts-node-esm",
-    "migration:create": "npm run typeorm migration:create ./migrations/history/$npm_config_name",
-    "migration:run": "npm run typeorm migration:run -- -d ./migrations/data-source.ts",
-    "migration:revert": "npm run typeorm migration:revert -- -d ./migrations/data-source.ts",
-    "migration:drop": "npm run typeorm schema:drop -- -d ./migrations/data-source.ts",
-    "migration:generate": "npm run typeorm migration:generate -- -d ./migrations/data-source.ts ./migrations/post-refactoring/latest-changes-migration"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@types/node": "^20.2.5",
-    "@types/winston": "^2.4.4",
-    "axios": "^1.1.3",
-    "bcrypt": "^5.1.0",
-    "compression": "^1.7.4",
-    "config": "^3.3.9",
-    "cors": "^2.8.5",
-    "express": "^4.18.2",
-    "helmet": "^7.0.0",
-    "mp-models": "^1.0.3",
-    "mysql2": "^3.3.3",
-    "pino": "^8.14.1",
-    "pino-http": "^8.3.3",
-    "reflect-metadata": "^0.1.13",
-    "sequelize": "^6.31.1",
-    "winston": "^3.9.0",
-    "winston-daily-rotate-file": "^4.7.1",
-    "yamljs": "^0.3.0"
-  },
-  "devDependencies": {
-    "@types/bcrypt": "^5.0.0",
-    "@types/chai": "^4.3.5",
-    "@types/chai-as-promised": "^7.1.5",
-    "@types/compression": "^1.7.2",
-    "@types/config": "^3.3.0",
-    "@types/cors": "^2.8.13",
-    "@types/express": "^4.17.17",
-    "@types/mocha": "^10.0.1",
-    "@types/sinon": "^10.0.15",
-    "@types/supertest": "^2.0.12",
-    "@types/yamljs": "^0.2.31",
-    "chai": "^4.3.7",
-    "chai-as-promised": "^7.1.1",
-    "eslint": "^8.40.0",
-    "mocha": "^10.2.0",
-    "nodemon": "^2.0.22",
-    "nyc": "^15.1.0",
-    "pino-pretty": "^10.0.0",
-    "prettier": "2.8.8",
-    "sequelize-typescript": "^2.1.5",
-    "sinon": "^15.0.4",
-    "supertest": "^6.3.3",
-    "ts-node": "^10.9.1",
-    "typeorm": "^0.3.16",
-    "typescript": "^5.1.3"
-  }
-}
->>>>>>> 855abf6 (something)
