@@ -47,11 +47,6 @@ export class CreateUserRelation1685561160096 implements MigrationInterface {
             isUnique: true,
           },
           {
-            name: "is_active",
-            type: "boolean",
-            default: false,
-          },
-          {
             name: "created_at",
             type: "timestamp",
             default: "now()",

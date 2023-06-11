@@ -1,4 +1,4 @@
-import { comparePassword, hashPassword } from "../libs/bcrypt"
+import { comparePassword, hashPassword } from "../libs/bcrypt";
 import { Users } from "../models/Users";
 import { HttpError } from "../utils/HttpError";
 
@@ -21,5 +21,5 @@ export async function getUser(email: string) {
 
 export async function registrationUser(email: string, password: string, telegram:string) {
   const passwordHash = await hashPassword(password);
-  return await Users.create({ login: email, password: passwordHash, telegram: telegram });
+  return await Users.create({ email, password: passwordHash, telegram: telegram });
 }
