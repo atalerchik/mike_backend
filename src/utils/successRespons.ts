@@ -15,8 +15,14 @@ export function errorResponse(req: Request, res: Response, err: unknown) {
   const status = err instanceof HttpError ? (err as HttpError).httpCode : 500;
 
   res.status(status).json({ status: "error", error: { message } });
-<<<<<<< HEAD
 }
-=======
+
+
+export function successResponses(req: Request, res: Response, data: any) {
+  const response = {
+    success: true,
+    data: data,
+  };
+
+  res.status(200).json(response);
 }
->>>>>>> 855abf6 (something)

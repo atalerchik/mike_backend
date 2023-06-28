@@ -29,12 +29,6 @@ export class CreateUserRelation1685561160096 implements MigrationInterface {
             isUnique: true,
           },
           {
-            name: "telegram",
-            type: "varchar",
-            length: "128",
-            isNullable: false,
-          },
-          {
             name: "authorization_token",
             type: "uuid",
             isNullable: true,

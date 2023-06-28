@@ -14,9 +14,9 @@ export async function LoginController(req: Request, res: Response) {
 }
 
 export async function RegistrationController(req: Request, res: Response) {
-  const { email, password, telegram } = req.body;
+  const { email, password } = req.body;
   try {
-    const user = await registrationUser(email, password, telegram);
+    const user = await registrationUser(email, password);
     successResponse(req, res, { user });
   } catch (error) {
     errorResponse(req, res, error);

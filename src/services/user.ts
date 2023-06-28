@@ -16,10 +16,10 @@ export async function loginUser(email: string, password: string) {
 }
 
 export async function getUser(email: string) {
-  return await Users.findOne({ where: { login: email } });
+  return await Users.findOne({ where: { email } });
 }
 
-export async function registrationUser(email: string, password: string, telegram:string) {
+export async function registrationUser(email: string, password: string) {
   const passwordHash = await hashPassword(password);
-  return await Users.create({ email, password: passwordHash, telegram: telegram });
+  return await Users.create({ email, password: passwordHash });
 }
