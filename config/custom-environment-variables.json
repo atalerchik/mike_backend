@@ -1,11 +1,12 @@
 {
-  "db": {
+    "db": {
     "host": "DATABASE_HOST",
     "port": "DATABASE_PORT",
     "user": "DATABASE_USERNAME",
     "password": "DATABASE_PASSWORD",
-    "databaseName": "DATABASE_NAME"
+    "database": "DATABASE_NAME"
   },
+
   "server": {
     "port": "SERVER_PORT"
   },
