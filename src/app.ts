@@ -1,11 +1,12 @@
-import express, { json, Application } from "express";
-import userRoutes from "./routes";
-import helmet from "helmet";
-import { errorBoundaryMiddleware } from "./middlewares/middlewares";
-import { connect } from "./libs/sequelize";
 import PinoHttp from "pino-http";
-import { logger } from "./libs/logger";
 import compression from "compression";
+import cors from "cors";
+import express, { json, Application } from "express";
+import helmet from "helmet";
+import userRoutes from "./routes/user";
+import { connect } from "./libs/sequelize";
+import { errorBoundaryMiddleware } from "./middlewares/middlewares";
+import { logger } from "./libs/logger";
 
 const app: Application = express();
 Promise.all([connect()]);
@@ -15,6 +16,7 @@ app.use(
     logger,
   }),
 );
+app.use(cors());
 app.use(helmet());
 app.use(json());
 app.use(errorBoundaryMiddleware);

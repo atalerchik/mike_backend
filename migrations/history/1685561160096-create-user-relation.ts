@@ -11,6 +11,8 @@ export class CreateUserRelation1685561160096 implements MigrationInterface {
           {
             name: "id",
             type: "uuid",
+            isGenerated: true,
+            generationStrategy: "uuid",
             isPrimary: true,
           },
           {
@@ -27,7 +29,7 @@ export class CreateUserRelation1685561160096 implements MigrationInterface {
             isUnique: true,
           },
           {
-            name: "authorithation_token",
+            name: "authorization_token",
             type: "uuid",
             isNullable: true,
             isUnique: true,
@@ -37,11 +39,6 @@ export class CreateUserRelation1685561160096 implements MigrationInterface {
             type: "uuid",
             isNullable: true,
             isUnique: true,
-          },
-          {
-            name: "is_active",
-            type: "boolean",
-            default: false,
           },
           {
             name: "created_at",
